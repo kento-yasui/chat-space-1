@@ -5,7 +5,6 @@
 |name|string|null: false, add_index :true, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
-
 ###Association
 - has_many :groups_users
 - has_many :messages
@@ -15,7 +14,6 @@
 |column|type|options|
 |------|----|-------|
 |name|string|null: false, unique: true|
-
 ###Association
 - has_many :groups_users
 - has_many :messages
@@ -28,7 +26,6 @@
 |image|string||
 |user_id|references|null: false, foreign_key :true|
 |group_id|references|null: false, foreign_key :true|
-
 ###Association
 - belongs_to :user
 - belongs_to :group
@@ -41,3 +38,4 @@
 ###Association
 - belongs_to :user
 - belongs_to :group
+
