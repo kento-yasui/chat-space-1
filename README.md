@@ -6,18 +6,18 @@
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
 ###Association
-- has_many :rooms
+- has_many :groups
 - has_many :messages
-- has_many :rooms, through: rooms_users
+- has_many :groups, through: groups_users
 
-## roomsテーブル
+## groupsテーブル
 |column|type|options|
 |------|----|-------|
-|roomname|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 ###Association
 - has_many :users
 - has_many :messages
-- has_many :users,through: rooms_users
+- has_many :users,through: groups_users
 
 ## messagesテーブル
 |column|type|options|
@@ -25,17 +25,17 @@
 |body|string||
 |image|string||
 |user_id|references|null: false, foreign_key :true|
-|room_id|references|null: false, foreign_key :true|
+|group_id|references|null: false, foreign_key :true|
 ###Association
 - belongs_to :user
-- belongs_to :room
+- belongs_to :group
 
-## rooms_usersテーブル
+## groups_usersテーブル
 |column|type|options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key :true|
-|room_id|integer|null: false, foreign_key :true|
+|group_id|integer|null: false, foreign_key :true|
 ###Association
 - belongs_to :user
-- belongs_to :room
+- belongs_to :group
 
