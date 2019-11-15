@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.references :groups, foreign_key: true
       t.timestamps
     end
-    has_many :groups
+    has_many :groups_users
     has_many :messages
     has_many :groups,throght: groups_users
   end
