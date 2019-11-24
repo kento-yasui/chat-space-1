@@ -17,7 +17,31 @@
         &__create-group, &__edit-user {
           margin-left: 0.3rem;
         }
+        .fa-edit:before {
+          color: #fff;
+        }
+        .fa-cog:before {
+          color: #fff;
+        }
       }
     }
   }
+}
+
+.groups {
+  background-color: #2f3e51;
+  padding: $side_group_pad;
+  height: 100vh;
+  .group {
+    margin-bottom: $side_group_margin;
+    font-weight: $side_bar_fw;
+    &__name {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.group__messages {
+  font-size: 11px;
 }
