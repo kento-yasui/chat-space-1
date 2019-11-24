@@ -1,0 +1,32 @@
+.main
+  .mainheader
+    .mainheader__left
+      %h2.mainheader__left__groupname
+        sample
+      %ul.mainheader__left__memberlist
+        Member:
+        %li.mainheader__left__memberlist__name
+          test
+        %li.mainheader__left__memberlist__name
+          hoge
+    .mainheader__right
+      =link_to "#" do
+        Edit
+  .messages
+    .message
+      .message__info
+        %p.message__info__talker
+          test
+        %p.message__info__date
+          2019/11/24
+      %p.message__text
+        fuga
+  .form
+    .input-box__text
+      %input{:name => "message", :placeholder => "type a message", :type => "text", :value => ""}
+      %label{class: "input-box__image"}
+      = icon('fas', 'image')
+    .input-box__image
+      %input{type: "file"}
+    .input-box__submit-btn
+      %input{:type => "submit", :value => "send"}
