@@ -18,11 +18,8 @@
         &__create-group, &__edit-user {
           margin-left: 0.3rem;
         }
-        .fa-edit:before {
-          color: #fff;
-        }
-        .fa-cog:before {
-          color: #fff;
+        .icon_color {
+          color: $white;
         }
       }
     }
