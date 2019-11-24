@@ -1,0 +1,23 @@
+.sidebar {
+  width: 300px;
+  color: $white;
+  .side-header {
+    font-size:16px;
+    background-color: #253141;
+    padding: $side_pad;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &__box {
+      font-weight: $side_bar_fw;
+      &__menu {
+        display: flex;
+        color: $white;
+        &__create-group, &__edit-user {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+}
