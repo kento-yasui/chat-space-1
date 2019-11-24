@@ -1,0 +1,19 @@
+%link(rel="stylesheet" href="/app/assets/stylesheets/application.scss")
+.sidebar
+  .side-header
+    .side-header__box
+      test_user
+    %ul.side-header__box__menu
+      %li.side-header__box__menu__create-group
+        =link_to "#" do
+          = icon( "fa", "edit")
+      %li.side-header__box__menu__edit-user
+        =link_to "#" do
+          = icon("fa", "cog")
+  .groups
+    .groups__name
+    -# グループ名
+    sample
+    .groups__messages
+    -# メッセージ小見出し
+    message_preview
