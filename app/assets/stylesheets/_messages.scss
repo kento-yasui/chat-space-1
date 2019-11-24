@@ -7,8 +7,9 @@
     padding: $side_pad;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 100px;
+    line-height: 100px;
+    align-items: center;
     &__box {
       font-weight: $side_bar_fw;
       &__menu {
@@ -31,7 +32,7 @@
 .groups {
   background-color: #2f3e51;
   padding: $side_group_pad;
-  height: 100vh;
+  height: calc( 100vh - 100px);
   .group {
     margin-bottom: $side_group_margin;
     font-weight: $side_bar_fw;
