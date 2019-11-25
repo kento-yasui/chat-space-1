@@ -1,49 +1,90 @@
-.sidebar {
-  width: 300px;
-  color: $white;
-  float: left;
-  .side-header {
-    font-size:16px;
-    background-color: #253141;
-    padding: $side_pad;
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    line-height: 100px;
-    align-items: center;
-    &__box {
-      font-weight: $side_bar_fw;
-      &__menu {
-        display: flex;
-        color: $white;
-        &__create-group, &__edit-user {
-          margin-left: 0.3rem;
-        }
-        .icon_color {
+.wrapper {
+  display: flex;
+  .sidebar {
+    width: 300px;
+    color: $white;
+    float: left;
+    .side-header {
+      font-size:16px;
+      background-color: #253141;
+      padding: $side_pad;
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+      line-height: 100px;
+      align-items: center;
+      &__box {
+        font-weight: $side_bar_fw;
+        &__menu {
+          display: flex;
           color: $white;
+          &__create-group, &__edit-user {
+            margin-left: 0.3rem;
+          }
+          .icon_color {
+            color: $white;
+          }
         }
       }
     }
   }
-}
-
-.groups {
-  background-color: #2f3e51;
-  padding: $side_group_pad;
-  height: calc( 100vh - 100px);
-  .group {
-    margin-bottom: $side_group_margin;
-    font-weight: $side_bar_fw;
-    &__name {
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__messages {
-      font-size: 11px;
+  
+  .groups {
+    background-color: #2f3e51;
+    padding: $side_group_pad;
+    height: calc( 100vh - 100px);
+    .group {
+      margin-bottom: $side_group_margin;
+      font-weight: $side_bar_fw;
+      &__name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__messages {
+        font-size: 11px;
+      }
     }
   }
-}
-
-.main {
-  float: left;
+  
+  .main {
+    width: calc( 100vw - 300px);
+  }
+  
+  .mainheader {
+    padding: 0 40px;
+    border-bottom: 0.5px solid #eee;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      margin-top: 35px;
+      &__groupname {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      &__memberlist {
+        color: #999;
+        font-size: 12px;
+        display: flex;
+        &__name {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+    &__right {
+      border: 0.5px solid $light-blue;
+      margin-top: 28px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      text-decoration: none;
+      color: $light-blue;
+    }
+  }
+  
+  .messages {
+    background-color: #fafafa;
+    padding: 46px 40px;
+  }
 }
