@@ -1,6 +1,7 @@
 .sidebar {
   width: 300px;
   color: $white;
+  float: left;
   .side-header {
     font-size:16px;
     background-color: #253141;
@@ -37,9 +38,12 @@
       font-size: 15px;
       margin-bottom: 5px;
     }
+    &__messages {
+      font-size: 11px;
+    }
   }
 }
 
-.group__messages {
-  font-size: 11px;
+.main {
+  float: left;
 }
