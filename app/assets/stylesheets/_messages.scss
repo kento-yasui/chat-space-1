@@ -14,7 +14,7 @@
       line-height: 100px;
       align-items: center;
       &__box {
-        font-weight: $side_bar_fw;
+        font-weight: $fw;
         &__menu {
           display: flex;
           color: $white;
@@ -28,14 +28,14 @@
       }
     }
   }
-  
+
   .groups {
     background-color: #2f3e51;
     padding: $side_group_pad;
     height: calc( 100vh - 100px);
     .group {
       margin-bottom: $side_group_margin;
-      font-weight: $side_bar_fw;
+      font-weight: $fw;
       &__name {
         font-size: 15px;
         margin-bottom: 5px;
@@ -45,11 +45,11 @@
       }
     }
   }
-  
+
   .main {
     width: calc( 100vw - 300px);
   }
-  
+
   .mainheader {
     padding: 0 40px;
     border-bottom: 0.5px solid #eee;
@@ -64,7 +64,7 @@
         margin-bottom: 15px;
       }
       &__memberlist {
-        color: #999;
+        color: $light-gray;
         font-size: 12px;
         display: flex;
         &__name {
@@ -82,9 +82,31 @@
       color: $light-blue;
     }
   }
-  
+
   .messages {
-    background-color: #fafafa;
+    background-color: $message_bgc;
     padding: 46px 40px;
+    .message {
+      &__info {
+        display: flex;
+        padding-bottom: 10px;
+        &__talker {
+          color: $message_color;
+          font-size: 16px;
+          font-weight: $fw;
+        }
+        &__date {
+          color: $light-gray;
+          font-size: 12px;
+          font-weight: $fw;
+          padding-left:10px;
+        }
+      }
+      &__text {
+        color: $message_color;
+        font-size: 14px;
+        padding-bottom: 40px;
+      }
+    }
   }
 }
