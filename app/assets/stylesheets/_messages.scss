@@ -72,13 +72,15 @@
         }
       }
     }
-    &__right {
+  }
+  .edit-link {
+    text-decoration: none;
+    &__edit-btn {
       border: 0.5px solid $light-blue;
       margin-top: 28px;
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
-      text-decoration: none;
       color: $light-blue;
     }
   }
@@ -86,6 +88,7 @@
   .messages {
     background-color: $message_bgc;
     padding: 46px 40px;
+    height: calc(100vh - 284px);
     .message {
       &__info {
         display: flex;
@@ -108,5 +111,47 @@
         padding-bottom: 40px;
       }
     }
+  }
+}
+
+.form {
+  background-color: #ddd;
+  padding: 20px 40px;
+  height: 90px;
+  box-sizing: border-box;
+  form {
+    display: flex;
+  }
+  .input-box {
+    position: relative;
+    width: 100%;
+    &__text {
+      width: 100%;
+      font-size: 16px;
+      color: $message_color;
+      padding: 0 10px 0 10px;
+      height: 50px;
+      box-sizing: border-box;
+      border-style: none;
+    }
+    &__image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      &__file {
+        display: none;
+      }
+    }
+  }
+  .submit-btn {
+    color: $white;
+    background-color: $light-blue;
+    margin-left: 10px;
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    cursor: pointer;
   }
 }
