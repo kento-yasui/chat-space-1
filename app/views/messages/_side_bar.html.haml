@@ -1,13 +1,13 @@
 .sidebar
   .side-header
     .side-header__box
-      test_user
+      = current_user.name
     %ul.side-header__box__menu
       %li.side-header__box__menu__create-group
-        =link_to "#" do
+        = link_to "#" do
           = icon( "fa", "edit", class: "icon_color")
       %li.side-header__box__menu__edit-user
-        =link_to "#" do
+        = link_to edit_user_path(current_user) do
           = icon("fa", "cog", class: "icon_color")
   .groups
     /後にeach文で複数のgroupを表示させるように書き換え？
