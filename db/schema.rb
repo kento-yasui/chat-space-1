@@ -12,28 +12,4 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "messages", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text    "body",    limit: 65535
-    t.text    "image",   limit: 65535
-    t.integer "user_id"
-    t.integer "room_id"
-  end
-
-  create_table "rooms", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "id"
-    t.text    "roomname", limit: 65535
-  end
-
-  create_table "rooms_users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.integer "room_id"
-  end
-
-  create_table "users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "id"
-    t.text    "name",     limit: 65535
-    t.text    "email",    limit: 65535
-    t.text    "password", limit: 65535
-  end
-
 end

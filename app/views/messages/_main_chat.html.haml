@@ -1,0 +1,39 @@
+.main
+  .mainheader
+    .mainheader__left
+      %h2.mainheader__left__groupname
+        sample
+      %ul.mainheader__left__memberlist
+        Member:
+        %li.mainheader__left__memberlist__name
+          test
+        %li.mainheader__left__memberlist__name
+          hoge
+    =link_to "#", class: "edit-link" do
+      .edit-link__edit-btn
+        Edit
+  .messages
+    .message
+      .message__info
+        %p.message__info__talker
+          test
+        %p.message__info__date
+          2019/11/24(sun) 11:00:00
+      %p.message__text
+        fuga
+
+      .message__info
+        %p.message__info__talker
+          test
+        %p.message__info__date
+          2019/11/24(sun) 11:00:00
+      %p.message__text
+        fuga
+  .form
+    %form{action: "", method: "post", type: "text", id: "new_message", class: "new_message" }
+      .input-box
+        %input{name: "message",placeholder: "type a message", type: "text", id: "message", class: "input-box__text"}
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", name: "commit", value: "Send", class: "submit-btn" }
