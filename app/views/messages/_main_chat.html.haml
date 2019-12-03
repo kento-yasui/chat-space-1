@@ -13,27 +13,14 @@
       .edit-link__edit-btn
         Edit
   .messages
-    .message
-      .message__info
-        %p.message__info__talker
-          test
-        %p.message__info__date
-          2019/11/24(sun) 11:00:00
-      %p.message__text
-        fuga
+    = render @messages
 
-      .message__info
-        %p.message__info__talker
-          test
-        %p.message__info__date
-          2019/11/24(sun) 11:00:00
-      %p.message__text
-        fuga
   .form
     = form_for [@group, @message] do |f|
       .input-box
         = f.text_field :content, class:"input-box__text", placeholder: "type a message"
-          = f.label :image, class:"input-box__image" do
-            = icon('fas', 'image')
-            = f.file_field :image, class: "input-box__image__file"
-      = f.submit "Send", class: "submit-btn"
+        = f.label :image, class:"input-box__image" do
+          = icon('fas', 'image')
+          = f.file_field :image, class: "input-box__image__file"
+      .send
+        = f.submit "Send", class: "send__submit-btn"
