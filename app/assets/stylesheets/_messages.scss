@@ -39,9 +39,14 @@
       &__name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: $white;
       }
-      &__messages {
+      &__message {
+        color: $white;
         font-size: 11px;
+      }
+      a {
+        text-decoration:none;
       }
     }
   }
