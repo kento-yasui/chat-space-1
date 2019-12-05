@@ -2,16 +2,14 @@
   .mainheader
     .mainheader__left
       %h2.mainheader__left__groupname
-        sample
+        = @group.name
       %ul.mainheader__left__memberlist
         Member:
         %li.mainheader__left__memberlist__name
-          test
-        %li.mainheader__left__memberlist__name
-          hoge
-    =link_to "#", class: "edit-link" do
-      .edit-link__edit-btn
-        Edit
+          - @group.users.each do |user|
+            = user.name
+    .edit-link
+      = link_to 'Edit', edit_group_path(params[:group_id]), method: :get
   .messages
     = render @messages
 

@@ -80,14 +80,16 @@
   }
   .edit-link {
     text-decoration: none;
-    &__edit-btn {
-      border: 0.5px solid $light-blue;
-      margin-top: 28px;
-      height: 40px;
-      line-height: 40px;
-      padding: 0 20px;
-      color: $light-blue;
-    }
+    border: 0.5px solid $light-blue;
+    margin-top: 28px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    color: $light-blue;
+  }
+  a {
+    color: $light-blue;
+    text-decoration: none;
   }
 
   .messages {
