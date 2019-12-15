@@ -93,6 +93,7 @@
   }
 
   .messages {
+    overflow: scroll;
     background-color: $message_bgc;
     padding: 46px 40px;
     height: calc(100vh - 265px);
