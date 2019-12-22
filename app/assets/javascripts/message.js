@@ -42,4 +42,26 @@ $(function(){
       alert("エラーが発生したため送信できませんでした");
     })
   })
+  var reloadMessages = function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var last_message_id = $('.message').last().data("message-id");
+      $.ajax({
+        url: 'api/messages',
+        type: 'GET',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        messages.forEach(function(message) {
+          insertHTML = buildHTML(message);
+          $('.messages').append(insertHTML);
+          $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight});
+        })
+      })
+      .fail(function() {
+        alert('更新に失敗しました');
+      });
+    };
+  }
+  setInterval(reloadMessages, 7000);
 })
